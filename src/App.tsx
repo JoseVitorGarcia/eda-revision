@@ -283,7 +283,6 @@ export interface Question {
   correctOptionIndex?: number;
   codeLines?: string[];
   explanation: string;
-  sourceRef: string;
 }
 
 // --- 2. BANCO DE DADOS (QUESTÕES) ---
@@ -304,7 +303,6 @@ const questions: Question[] = [
     ],
     explanation:
       "Calcula-se o índice. Se não existir lista lá, cria-se uma. Adiciona-se o par chave-valor na lista.",
-    sourceRef: "EDA - REVISAO.pdf (Questão 10)",
   },
   {
     id: 3,
@@ -321,7 +319,6 @@ const questions: Question[] = [
     ],
     explanation:
       "A contagem soma 1 (o nó atual) com o resultado recursivo dos filhos da esquerda e direita.",
-    sourceRef: "EDA - REVISAO.pdf (Questão 7)",
   },
   {
     id: 1,
@@ -339,7 +336,6 @@ const questions: Question[] = [
     correctOptionIndex: 1,
     explanation:
       "A árvore AVL é uma árvore binária de busca balanceada onde a diferença de altura entre subárvores esquerda e direita é no máximo 1.",
-    sourceRef: "EDA - REVISAO.pdf (Questão 1)",
   },
   {
     id: 23,
@@ -358,7 +354,6 @@ const questions: Question[] = [
     ],
     explanation:
       "Se existe aresta entre U e V, marcamos matrix[u][v] como 1. Se não direcionado, marcamos também a volta.",
-    sourceRef: "Aula 12 - EDA.pdf",
   },
   {
     id: 2,
@@ -376,7 +371,6 @@ const questions: Question[] = [
     correctOptionIndex: 1,
     explanation:
       "O fator de balanceamento é a altura da subárvore esquerda menos a da direita. Para ser AVL, deve ser -1, 0 ou 1.",
-    sourceRef: "EDA - REVISAO.pdf (Questão 4)",
   },
   {
     id: 4,
@@ -393,7 +387,6 @@ const questions: Question[] = [
     ],
     explanation:
       "A altura é definida pelo maior caminho até uma folha, então pegamos o máximo entre esquerda e direita e somamos 1.",
-    sourceRef: "EDA - REVISAO.pdf (Questão 8)",
   },
   {
     id: 5,
@@ -411,7 +404,6 @@ const questions: Question[] = [
     correctOptionIndex: 0,
     explanation:
       "BFS (Breadth-First Search) usa fila para visitar vizinhos em camadas. DFS (Depth-First Search) usa pilha (ou recursão) para ir ao fundo do grafo.",
-    sourceRef: "EDA - REVISAO.pdf (Questão 3)",
   },
   {
     id: 6,
@@ -429,7 +421,6 @@ const questions: Question[] = [
     correctOptionIndex: 1,
     explanation:
       "Para grafos densos (E próximo de V²), a Matriz de Adjacência é preferível pois o custo de espaço é fixo e o acesso à aresta é O(1).",
-    sourceRef: "Aula 12 - EDA.pdf",
   },
   {
     id: 7,
@@ -446,7 +437,6 @@ const questions: Question[] = [
     correctOptionIndex: 1,
     explanation:
       "Um grafo é bipartido se V pode ser particionado em V1 e V2 tal que todas as arestas conectam um vértice de V1 a um de V2.",
-    sourceRef: "Aula 12 - EDA.pdf",
   },
   {
     id: 8,
@@ -464,7 +454,6 @@ const questions: Question[] = [
     correctOptionIndex: 1,
     explanation:
       'Dijkstra é guloso ("greedy"). Se houver pesos negativos, a premissa de que o caminho "fechado" é o menor pode ser violada posteriormente.',
-    sourceRef: "Aula 11 - EDA.pdf",
   },
   {
     id: 9,
@@ -481,7 +470,6 @@ const questions: Question[] = [
     correctOptionIndex: 1,
     explanation:
       "Bellman-Ford relaxa todas as arestas V-1 vezes, permitindo acomodar reduções de custo por arestas negativas e detectar ciclos negativos.",
-    sourceRef: "Algoritmos eda.txt",
   },
   {
     id: 10,
@@ -499,7 +487,6 @@ const questions: Question[] = [
     ],
     explanation:
       'Se a distância até V passando por U for menor que a distância que eu já conhecia para V, atualizo o valor e o "pai".',
-    sourceRef: "Algoritmos eda.txt (Função Dijkstra)",
   },
   {
     id: 11,
@@ -517,7 +504,6 @@ const questions: Question[] = [
     ],
     explanation:
       "Após relaxar V-1 vezes, se ainda for possível relaxar alguma aresta, existe um ciclo negativo acessível.",
-    sourceRef: "Algoritmos eda.txt (Bellman-Ford)",
   },
   {
     id: 12,
@@ -530,7 +516,6 @@ const questions: Question[] = [
     correctOptionIndex: 1,
     explanation:
       "Como os pesos são estritamente positivos e queremos a partir de uma fonte única (depósito), Dijkstra é o mais eficiente.",
-    sourceRef: "EDA - REVISAO.pdf (Questão 12)",
   },
   {
     id: 13,
@@ -548,7 +533,6 @@ const questions: Question[] = [
     correctOptionIndex: 1,
     explanation:
       "Prim cresce a partir de vértices. Em grafos densos, evita a ordenação de uma quantidade massiva de arestas que o Kruskal exigiria.",
-    sourceRef: "EDA - REVISAO.pdf (Questão 14)",
   },
   {
     id: 14,
@@ -565,7 +549,6 @@ const questions: Question[] = [
     ],
     explanation:
       "Kruskal é baseado em arestas: pega a menor globalmente, verifica se conecta componentes diferentes (evita ciclo) e une.",
-    sourceRef: "Algoritmos eda.txt (Kruskal)",
   },
   {
     id: 15,
@@ -582,7 +565,6 @@ const questions: Question[] = [
     ],
     explanation:
       'Prim expande a árvore "gulosamente" sempre pegando o vizinho mais próximo da árvore atual.',
-    sourceRef: "Algoritmos eda.txt (Prim)",
   },
   {
     id: 16,
@@ -600,7 +582,6 @@ const questions: Question[] = [
     correctOptionIndex: 1,
     explanation:
       "Union-Find permite verificar ciclos e unir componentes conexos de forma quase constante, essencial para o Kruskal.",
-    sourceRef: "Algoritmos eda.txt",
   },
   {
     id: 17,
@@ -618,7 +599,6 @@ const questions: Question[] = [
     correctOptionIndex: 1,
     explanation:
       'Separate Chaining mantém uma lista de elementos que caíram no mesmo índice, permitindo múltiplos valores por "bucket".',
-    sourceRef: "EDA - REVISAO.pdf (Questão 5)",
   },
   {
     id: 18,
@@ -636,7 +616,6 @@ const questions: Question[] = [
     ],
     explanation:
       "Calcula-se o índice. Se não existir lista lá, cria-se uma. Adiciona-se o par chave-valor na lista.",
-    sourceRef: "EDA - REVISAO.pdf (Questão 10)",
   },
   {
     id: 19,
@@ -653,7 +632,6 @@ const questions: Question[] = [
     correctOptionIndex: 1,
     explanation:
       "Um ciclo é um caminho fechado onde o vértice inicial é igual ao final.",
-    sourceRef: "Aula 12 - EDA.pdf",
   },
   {
     id: 20,
@@ -670,7 +648,6 @@ const questions: Question[] = [
     correctOptionIndex: 0,
     explanation:
       "Grafos ponderados associam valores (distância, custo, tempo) às suas arestas.",
-    sourceRef: "Aula 12 - EDA.pdf",
   },
   {
     id: 21,
@@ -687,7 +664,6 @@ const questions: Question[] = [
     correctOptionIndex: 2,
     explanation:
       "Pós-ordem visita os filhos primeiro (Esquerda, depois Direita) e por último a Raiz.",
-    sourceRef: "EDA - REVISAO.pdf",
   },
   {
     id: 22,
@@ -700,7 +676,6 @@ const questions: Question[] = [
     correctOptionIndex: 1,
     explanation:
       "Visitamos cada vértice (V) e cada aresta (E) uma vez no pior caso.",
-    sourceRef: "Aula 12 - EDA.pdf",
   },
   {
     id: 23,
@@ -719,7 +694,6 @@ const questions: Question[] = [
     ],
     explanation:
       "Se existe aresta entre U e V, marcamos matrix[u][v] como 1. Se não direcionado, marcamos também a volta.",
-    sourceRef: "Aula 12 - EDA.pdf",
   },
   {
     id: 24,
@@ -736,7 +710,6 @@ const questions: Question[] = [
     correctOptionIndex: 2,
     explanation:
       "Floyd-Warshall calcula as distâncias mais curtas entre todos os pares de nós em O(V^3).",
-    sourceRef: "EDA - REVISAO.pdf (Questão 20 citada indiretamente)",
   },
   {
     id: 25,
@@ -753,7 +726,6 @@ const questions: Question[] = [
     correctOptionIndex: 1,
     explanation:
       "Em um grafo conexo não há vértices isolados; é possível chegar de A a B para quaisquer A e B.",
-    sourceRef: "Aula 11 - EDA.pdf",
   },
   {
     id: 26,
@@ -770,7 +742,6 @@ const questions: Question[] = [
     ],
     explanation:
       "Todas as distâncias começam como Infinito, exceto a origem que é 0. Colocamos a origem na fila de prioridade.",
-    sourceRef: "Algoritmos eda.txt",
   },
   {
     id: 27,
@@ -788,7 +759,6 @@ const questions: Question[] = [
     correctOptionIndex: 0,
     explanation:
       "Sondagem Linear verifica o índice i, depois i+1, i+2... até achar espaço livre.",
-    sourceRef: "EDA - REVISAO.pdf",
   },
   {
     id: 28,
@@ -805,7 +775,6 @@ const questions: Question[] = [
     correctOptionIndex: 1,
     explanation:
       "B-Trees minimizam operações de I/O em disco pois possuem muitos filhos por nó, reduzindo a altura da árvore.",
-    sourceRef: "EDA - REVISAO.pdf (Questão 1)",
   },
   {
     id: 29,
@@ -823,7 +792,6 @@ const questions: Question[] = [
     ],
     explanation:
       "A compressão de caminho faz com que nós apontem diretamente para a raiz do conjunto, acelerando buscas futuras.",
-    sourceRef: "Algoritmos eda.txt",
   },
   {
     id: 30,
@@ -835,7 +803,6 @@ const questions: Question[] = [
     correctOptionIndex: 1,
     explanation:
       "Armazenamos uma lista para cada Vértice, contendo suas Arestas.",
-    sourceRef: "Aula 12 - EDA.pdf",
   },
 ];
 
@@ -1262,9 +1229,7 @@ export default function App() {
                   color: "#64748b",
                   fontStyle: "italic",
                 }}
-              >
-                Ref: {currentQ.sourceRef}
-              </span>
+              ></span>
               <button onClick={nextQuestion} className="next-btn">
                 Próxima <ArrowRight size={16} strokeWidth={3} />
               </button>
